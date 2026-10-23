@@ -1,0 +1,111 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: white;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+}
+
+main {
+  width: min(90%, 650px);
+  margin: 0 auto;
+  padding: 100px 0 50px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: normal;
+}
+
+button {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#nextButton {
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 18px;
+  background: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 0;
+}
+
+#musicButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 5px 8px;
+  background: white;
+  border: 1px solid black;
+}
+
+#reveal {
+  margin-top: 20px;
+}
+
+#phrase {
+  min-height: 50px;
+  font-size: 28px;
+  overflow-wrap: anywhere;
+}
+
+#phrase::after {
+  content: "|";
+  animation: blink 0.7s step-end infinite;
+}
+
+#letter {
+  margin-top: 30px;
+  padding: 25px;
+  background: white;
+  text-align: left;
+  line-height: 1.8;
+}
+
+#letter h2 {
+  font-weight: normal;
+}
+
+#message {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+#signoff {
+  margin-top: 25px;
+}
+
+#signature {
+  margin-top: 25px;
+  text-align: right;
+  line-height: 1.8;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #phrase::after {
+    animation: none;
+  }
+}
